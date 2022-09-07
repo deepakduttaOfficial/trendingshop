@@ -5,7 +5,15 @@ const Footer = () => {
   return (
     <>
       <footer className=" bg-dark text-white p-2 fixed-bottom ">
-        <p className="m-auto text-center">Create By Coder Deepak ©{date}</p>
+        <a
+          href="https://deepakdutta.netlify.app/"
+          target={"_blank"}
+          className="text-decoration-none"
+        >
+          <p className="m-auto text-center text-">
+            Create By Coder_Deepak ©{date}
+          </p>
+        </a>
       </footer>
     </>
   );

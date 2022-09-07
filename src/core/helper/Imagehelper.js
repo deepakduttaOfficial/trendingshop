@@ -9,7 +9,7 @@ const Imagehelper = ({ product }) => {
       src={imageUrl}
       className="card-img-top"
       alt="Product"
-      style={{ width: "12rem", height: "15rem" }}
+      style={{ width: "100%" }}
     />
   );
 };

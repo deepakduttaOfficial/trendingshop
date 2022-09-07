@@ -45,7 +45,7 @@ const Card = ({
   };
 
   return (
-    <div className="card" style={{ width: "194px" }}>
+    <div className="card  m-3 " style={{ width: "30%", minWidth: "400px" }}>
       {addProduct ? (
         successAnimation(
           `Add product  `,

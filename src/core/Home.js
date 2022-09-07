@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getallproducts } from "../admin/helper/adminhelper";
+import Banner from "./Banner";
 import Base from "./Base";
 import Card from "./Card";
 
@@ -24,27 +25,27 @@ const Home = () => {
   }, []);
 
   return (
-    <Base title="Fly Buy , shopping" className="text-white mt-4">
+    <Base className="text-white mt-5">
       {loading ? (
         <div className="container text-center mt-5">
           <div
             className="spinner-border"
-            style={{ width: "5rem", height: "5rem" }}
+            // style={{ width: "5rem", height: "5rem" }}
             role="status"
           >
             <span className="visually-hidden">Loading...</span>
           </div>
         </div>
       ) : (
-        <div className="row row-cols-auto">
-          {products.map((product, index) => {
-            return (
-              <div className="col c-cart p-2 m-1 text-dark" key={index}>
-                <Card product={product} />
-              </div>
-            );
-          })}
-        </div>
+        <>
+          <Banner />
+          <h3 className="m-4 text-center">Let’s get visual </h3>
+          <div className="d-flex flex-wrap">
+            {products.map((product, index) => {
+              return <Card product={product} key={index} />;
+            })}
+          </div>
+        </>
       )}
     </Base>
   );
